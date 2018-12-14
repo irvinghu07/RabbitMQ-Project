@@ -6,10 +6,10 @@ spring:
       password:
       type: com.alibaba.druid.pool.DruidDataSource
   rabbitmq:
-    addresses: localhost:5672
+    addresses: 127.0.0.1:5672
     username: guest
     password: guest
-    virtual-host: /order
+    virtual-host: /
     connection-timeout: 15000
   http:
     encoding:

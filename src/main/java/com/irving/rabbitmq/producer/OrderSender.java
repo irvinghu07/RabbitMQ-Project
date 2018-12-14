@@ -19,7 +19,7 @@ public class OrderSender {
     @Autowired
     private RabbitTemplate rabbitTemplate;
 
-    public void sendOrder(Order order) throws Exception {
+    public void send(Order order) throws Exception {
         CorrelationData correlationData = new CorrelationData();
         correlationData.setId(order.getMessageId());
         rabbitTemplate.convertAndSend("order-exchange", //交换机exchange(在控制台创建的交换机名)
